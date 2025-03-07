@@ -22,7 +22,7 @@
             <input value="X" name="reiz" onclick="rez.value=sk1.value*skl2.value" type="button">
             <input value="-" name="atnem" onclick="rez.value=skl.value-skl2.value" type="button">
             <input value="/" name="dalīšana" onclick="rez.value=skl.value/skl2.value" type="button">
-            <input value="+" name="saskaita" onclick="rez.value=skl.value+skl2.value" type="button">
+            <input value="+" name="saskaita" onclick="rez.value=parseInt(skl.value)+parseInt(skl2.value)" type="button">
             <input value="clear" name="notir" onclick="rez.value='';skl2.value='';" type="button">
         </div>
         <div>2.skaitlis<input type="text" name="sk2">
