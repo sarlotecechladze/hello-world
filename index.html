@@ -11,6 +11,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+
         <style>
             body {
                 font-family: "Lato", sans-serif, 
@@ -22,48 +24,67 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </style>
     </head>
     <body>
-        <!-- Navbar -->
-        <div class="w3-top">
-            <div class="w3-bar w3-black w3-card">
-                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-                <a href="#" class="w3-bar-item w3-button w3-padding-large">GIMP</a>
-                <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INKSCAPE</a>
-                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEKSTA APSTRĀDE</a>
-                <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3D VEIDOŠANA/VIDEO APSTRĀDE</a>
-                <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">IZKLĀJLAPAS</a>
+      <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#ievads" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
 
-
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-padding-large">Attēlu apstrāde ▼</button>
+            <div class="w3-dropdown-content w3-bar-block w3-black w3-animate-opacity">
+               
+                <a href="#vektorgrafika" class="w3-bar-item w3-button">Vektorgrafika</a>
+                <a href="#rastrgrafika" class="w3-bar-item w3-button">Rastrgrafika</a>
             </div>
         </div>
+        <a href="otrais.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Individuālā tēma</a>
+        <a href="#3d-veidosana" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3D veidošana</a>
+        <a href="#video-apstrade" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Video apstrāde</a>
+        <a href="#izklajlapas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Izklājlapas</a>
+    </div>
+</div>
 
-        <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-            <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GIMP</a>
-            <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INKSCAPE</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEKSA APSTRĀDE</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3D VEIDOŠANA/VIDEO APSTRĀDE</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">IZKLĀJLAPAS</a>
-        </div> <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="HOME">
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" ">
+    <a href="otrais.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Individuālā tēma</a>
+    <a href="#3d-veidosana" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3D veidošana</a>
+    <a href="#video-apstrade" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Video apstrāde</a>
+    <a href="#izklajlapas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Izklājlapas</a>
+</div>
+<div class="w3-container w3-content w3-center w3-padding-64" " id="sakums">
+
         <h1>Ko es esmu apguvusi datorikā?</h1>
         </div>
-        <div class="w3-bar-item w3-button w3-padding-large" id="GIMP"> 
+        <div class="w3-bar-item w3-button w3-padding-large" id="ievads"> 
+        <h2>Ievads</h2>
+            <p>Šajā mācību gadā es esmu ļoti daudz jaunu zināšanu ieguvusi datorikā. </p>
+            <div class="button-container">
+        <a href="dzer.html" class="button-link">Dzer</a>
+        <a href="dzerdaudz.html" class="button-link">Dzer Daudz</a>
+        <a href="forma.html" class="button-link">Forma</a>
+    </div>
+        </div>
+        
+        <div class="w3-bar-item w3-button w3-padding-large" id="rastrgrafika"> 
         <h2> GIMP</h2>
-        <p> Gimp, bija pirmā tēma 10. klasē, ko apguvām.Es ieguvu zināšanas par:</p>
+        <p> Gimp, bija pirmā tēma 10. klasē, ko apguvām.Tā ir ir bezmaksas un atvērtā koda attēlu rediģēšanas programma, kas piedāvā plašas iespējas fotoattēlu apstrādei, zīmēšanai un grafikas veidošanai.
+Es ieguvu zināšanas par:</p>
         <ul><li>Rastrgrafiku</li>
             <li> Baneru veidošanu</li>
             <li> Gifu veidošanu</li>
             <li> Attēlu veidošanu</li>
         </ul> <img src="images/bgimp.gif" width="128" height="128">
         </div>
-        <div class="w3-bar-item w3-button w3-padding-large" id="INKSCAPE"> 
+        <div class="w3-bar-item w3-button w3-padding-large" id="vektorgrafika"> 
         <h2>Inkscape</h2>
-        <p> Inkscape bija 2. tēma, ko apguvām. Es ieguvu zināšanas par:</p>
+        <p> Inkscape bija 2. tēma, ko apguvām. Tā ir ir bezmaksas un atvērtā koda vektorgrafikas rediģēšanas programma, kas paredzēta ilustrāciju, logotipu un citu grafisko elementu veidošanai, izmantojot SVG formātu. Es ieguvu zināšanas par:</p>
         <ul><li>Vektorgrafiku</li>
             <li>Plakātu veidošanu</li>
         </ul>
         </div>
-        <div class="w3-bar-item w3-button w3-padding-large" id="TEKSTA APSTRĀDE"> 
+        <div class="w3-bar-item w3-button w3-padding-large" id="word"> 
         <h2>Teksta apstrāde</h2>
             <p>Mēs šogad padziļinātāk mācījāmies izmantot Word. Tas ir universāls rīks, kas tiešām noderēs nākotnē arī man. Es iemācījos: </p>
             <ul>
@@ -73,11 +94,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <li>Satura rādītāja ievietošanu</li>
                 <li>Datorrakstu</li>
         </div>
-        <div class="w3-bar-item w3-button w3-padding-large" id="3D VEIDOŠANA/VIDEO APSTRĀDE"> 
-        <h2>3D veidošana/video apstrāde</h2>
+        <div class="w3-bar-item w3-button w3-padding-large" id="3d-veidosana"> 
+        <h2>3D veidošana</h2>
             <p> Mēs izveidojām prototipu 3D kubam Tinkercad vietnē, pēctam mūsu grupa to izprintēja, novīlēja un salika kopā. Visu procesu mēs filmējām un un es izveidoju video Wavevideo vietnē.</p>
         </div>
-        <div class="w3-bar-item w3-button w3-padding-large" id="IZKLĀJLAPAS"> 
+         <div class="w3-bar-item w3-button w3-padding-large" id="video-apstrade"> 
+        <h2>Video apstrāde</h2>
+            <p> Visu procesu mēs filmējām un un es izveidoju video Wavevideo vietnē.</p>
+        </div>
+        <div class="w3-bar-item w3-button w3-padding-large" id="izklajlapas"> 
         <h2>Izklājlapas</h2>
             <p> Šī tēma man šķita vissgrūtākā. Mācoties to, es vēlējos izmest datoru ārā pa logu un sākt raudāt. Tā man galīgi nepatika, taču es apguvu:</p>
             <ul><li>Failu importēšanu</li>
@@ -85,5 +110,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <li>Funkcijas</li>
                 <li>Formulas</li>
         </div>
+     
+        <script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+</script>
+
     </body>
 </html>
