@@ -65,11 +65,28 @@ body {
     background-color: white;
     color: rgb(3, 2, 2);}
 
-      .content-box {
-    width: 90%; /* Ensures uniform width */
-    min-height: auto; /* Allows content to define height */
-    max-width: 600px; /* Optional: Ensures they don’t get too wide */
-    margin: 0 auto; /* Centers the boxes */
+      
+
+/* Center the content boxes */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center them horizontally */
+    justify-content: center; /* Center them vertically if needed */
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
-
+/* Style for content boxes */
+.content-box {
+    width: 120%; /* Adjust width as needed */
+    max-width: 1200px; /* Prevents being too wide on large screens */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    padding: 20px;
+    margin: 10px 0; /* Space between boxes */
+    text-align: center;
+   word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal; 
+}
