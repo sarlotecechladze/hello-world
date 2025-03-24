@@ -1,133 +1,64 @@
-/* Navigation Bar */
 .w3-bar {
-    background-color: #0A192F; /* Deep Navy Blue */
+    background-color: #333; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-/* Background */
 body {
-    background-image: url('images/IMG_3420.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+      background-image: url('images/IMG_3420.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
 }
-
-/* Navigation Buttons */
 .w3-bar-item.w3-button, 
 .w3-dropdown-hover .w3-button {
-    background-color: rgba(21, 44, 85, 0.9); /* Dark Navy Blue */
-    color: white;
+    background-color: rgba(0, 0, 107, 0.79); 
+    color: black;
     padding: 14px 20px;
     margin: 10px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 173, 255, 0.4);
+    border: 2px solid black;
+    border-radius: 1px;
+    box-shadow: 0px 4px 10px rgba(246, 102, 45, 0.951);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
-font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    color: white; /* Fallback color */
-    background: linear-gradient(90deg, #00C6FF, #0072FF); /* Light Blue to Dark Blue */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 10px rgba(0, 173, 255, 0.6);
-    letter-spacing: 2px;
-    margin-top: 20px;
-    padding: 10px;
-    animation: fadeIn 1s ease-in-out;
-}
 
-/* Animation for Fade-in Effect */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
-}
-
-/* Hover Effect */
 .w3-bar-item.w3-button:hover, 
 .w3-dropdown-hover .w3-button:hover {
     background-color: white;
-    color: #0A192F;
-    transform: scale(1.1);
+    color: black;
 }
-
-/* Dropdown */
 .w3-dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(21, 44, 85, 0.95); /* Dark Navy Blue */
+    background-color: rgba(255, 171, 62, 0.9); 
     min-width: 160px;
-    box-shadow: 0px 4px 10px rgba(0, 173, 255, 0.4);
+    box-shadow: 0px 4px 10px rgba(246, 102, 45, 0.951);
     z-index: 1;
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: 1px;
 }
 
-/* Show Dropdown on Hover */
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
-    animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Dropdown Links */
 .w3-dropdown-content a {
-    color: white;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1px;
     transition: background 0.3s ease-in-out;
 }
 
-/* Dropdown Hover Effect */
 .w3-dropdown-content a:hover {
     background-color: white;
-    color: #0A192F;
-}
-
-/* Animation for Dropdown */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .w3-bar {
-        flex-direction: column;
-    }
-    
-    .w3-bar-item.w3-button {
-        width: 90%;
-        text-align: center;
-        margin: 5px 0;
-    }
-    
-    .w3-dropdown-content {
-        position: relative;
-        width: 100%;
-    }
-}
-
+    color: black;}
