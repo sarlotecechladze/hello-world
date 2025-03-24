@@ -1,41 +1,99 @@
+
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
     <head>
-        <title>navbar</title>
+        <title>MANS DATORIKAS PORTFOLIO</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
+            body {
+                font-family: "Lato", sans-serif;
+                margin: 0;
+                padding-top: 50px; 
+            }
+            .mySlides {
+                display: none;
+            }
+            .content {
+                padding: 20px;
+            }
+        </style>
     </head>
     <body>
-        <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">GIMP</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INKSCAPE</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEKSTA APSTRĀDE</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3D VEIDOŠANA/VIDEO APSTRĀDE</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">IZKLĀJLAPAS</a>
-   
-    
-  </div>
-</div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GIMP</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INKSCAPE</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEKSA APSTRĀDE</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3D VEIDOŠANA/VIDEO APSTRĀDE</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">IZKLĀJLAPAS</a>
-</div>
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="#ievads" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-padding-large">Attēlu apstrāde ▼</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-black w3-animate-opacity">
+                        <a href="#vektorgrafika" class="w3-bar-item w3-button">Vektorgrafika</a>
+                        <a href="#rastrgrafika" class="w3-bar-item w3-button">Rastrgrafika</a>
+                    </div>
+                </div>
+                <a href="#individuala-tema" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Individuālā tēma</a>
+                <a href="#3d-veidosana" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3D veidošana</a>
+                <a href="#video-apstrade" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Video apstrāde</a>
+                <a href="#izklajlapas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Izklājlapas</a>
+            </div>
+        </div>
+
+        <!-- Navbar on small screens-->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <a href="#individuala-tema" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Individuālā tēma</a>
+            <a href="#3d-veidosana" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3D veidošana</a>
+            <a href="#video-apstrade" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Video apstrāde</a>
+            <a href="#izklajlapas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Izklājlapas</a>
+        </div>
+
+        <!-- Saturs -->
+        <div class="content">
+            <h2 id="individuala-tema">Individuālā tēma</h2>
+            <p>Es izveidoju plakātu programmā Inkspace par WIFI drošību.</p>
+        </div>
+
+        <script>
+        // Automātiskā slaidrāde - maina attēlus ik pēc 4 sekundēm
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 4000);    
+        }
+
+        // Pāriet starp mobilo un galveno navigāciju
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // Aizver modālo logu, ja noklikšķina ārpus tā
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
 
     </body>
 </html>
