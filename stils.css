@@ -51,6 +51,13 @@
 /* Show dropdown on hover */
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
+    position: absolute;
+    top: 100%; /* Tieši zem dropdown trigeri */
+    left: 0;
+    width: max-content; /* Pielāgo platumu saturam */
+    background: white; /* Pievieno fonu */
+    z-index: 1000; /* Nodrošina, ka dropdown paliek virs citiem elementiem */
+
 }
 
 /* Dropdown Link Styling */
