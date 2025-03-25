@@ -89,7 +89,7 @@ body {
     border-radius: 1px;
     z-index: 1; /* Ensures it appears above other elements */
 
-     transform: translateX(-17px); /* Pārvieto pa kreisi par 20px */
+     transform: translateX(-16px); /* Pārvieto pa kreisi par 20px */
 
 }
 
@@ -114,4 +114,8 @@ body {
     background-color: white;
     color: black; 
 
-
+.scroll 
+    {
+    padding-top: 80px; /* Adjust according to your navbar height */
+    margin-top: -80px; /* Compensates for the padding to prevent section overlap */
+}
