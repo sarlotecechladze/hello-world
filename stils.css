@@ -105,7 +105,7 @@ position: relative;
     position: absolute;
     top: 100%; /* Moves it directly below the button */
     left: 0; /* Aligns it with the left side of the button */
-    width: 100%; /* Matches the button's width */
+    width: 80%; /* Matches the button's width */
     z-index: 1000; /* Ensures it appears above other elements */
     border-radius: 1px;
     transition: background 0.3s ease-in-out;
@@ -113,9 +113,6 @@ position: relative;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    max-width: 200px; /* Vai cita vēlamā vērtība */
-    width: auto; /* Lai saturs pielāgojas */
-    min-width: 150px; /* Ja nepieciešams minimāls platums */
       font-size: 16px;
     font-weight: bold;
     text-align: center;
