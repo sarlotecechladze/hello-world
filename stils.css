@@ -50,7 +50,7 @@ body {
 
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
-    position: relative;
+    
 }
 
 .w3-dropdown-content a {
@@ -68,6 +68,10 @@ body {
 .w3-dropdown-content a:hover {
     background-color: white;
     color: rgb(3, 2, 2);}
+
+.w3-dropdown-hover{
+position: relative;
+}
 
       
 
@@ -94,7 +98,7 @@ body {
     overflow-wrap: break-word;
     white-space: normal; 
 }
-h1 {
+.h1 {
     font-size: 36px;
     font-weight: bold;
     color: white;
