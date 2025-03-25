@@ -96,7 +96,7 @@ body {
     border-radius: 5px;
     
     top: 100%; /* Places it directly below the button */
-    left: 50%; /* Centers the dropdown */
+    left: 20%; /* Centers the dropdown */
     transform: translateX(-50%); /* Adjusts centering */
     
     z-index: 1000; /* Ensures it's above other elements */
