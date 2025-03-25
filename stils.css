@@ -34,12 +34,6 @@ body {
     color: rgb(4, 4, 4);
 }
 
-.w3-dropdown-hover:hover .w3-dropdown-content {
-    display: block;
-    
-}
-
-
 .w3-dropdown-content a:hover {
     background-color: white;
     color: rgb(3, 2, 2);}
@@ -83,8 +77,9 @@ body {
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
 }
 
+
 .w3-dropdown-hover {
-    position: relative; /* Ensures the dropdown aligns with the button */
+    position: relative; /* Ensures dropdown aligns with button */
 }
 
 .w3-dropdown-content {
@@ -96,8 +91,13 @@ body {
     border-radius: 5px;
     
     top: 100%; /* Places it directly below the button */
-    left: 20%; /* Centers the dropdown */
-    transform: translateX(-50%); /* Adjusts centering */
+    left: 0; /* Aligns it with the left edge of the button */
     
-    z-index: 1000; /* Ensures it's above other elements */
+    z-index: 1000; /* Ensures it appears above other elements */
 }
+
+/* Show dropdown on hover */
+.w3-dropdown-hover:hover .w3-dropdown-content {
+    display: block;
+}
+
