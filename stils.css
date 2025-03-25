@@ -1,118 +1,69 @@
-/* ======= VISPĀRĪGIE IESTATĪJUMI ======= */
-body {
-    font-family: "Lato", sans-serif;
-    background-image: url('images/backgw.png'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
-
-/* ======= NAVIGĀCIJAS JOSLA ======= */
-.w3-top {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Navbar galvenais konteiners */
 .w3-bar {
-    background-color: rgb(5, 35, 99);
+    background-color: rgb(5, 35, 99); 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 10px 0;
 }
-
-/* Navbar pogas */
+body {
+      background-image: url('images/backgw.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+}
 .w3-bar-item.w3-button, 
 .w3-dropdown-hover .w3-button {
-    background-color: rgb(5, 35, 99);
+    background-color: rgb(5, 35, 99) ; 
     color: white;
     padding: 14px 20px;
-    margin: 5px;
+    margin: 10px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(86, 130, 224, 0.6);
+    border-radius: 1px;
+    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    text-decoration: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    min-width: 150px;
 }
 
-/* Hover efekts */
 .w3-bar-item.w3-button:hover, 
 .w3-dropdown-hover .w3-button:hover {
     background-color: white;
     color: rgb(4, 4, 4);
 }
 
-/* ======= DROPDOWN STILS ======= */
-.w3-dropdown-hover {
-    position: relative;
-}
-
-/* Dropdown saturs */
-.w3-dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(5, 35, 99);
-    min-width: 160px;
-    box-shadow: 0px 4px 10px rgba(86, 130, 224, 0.6);
-    z-index: 999;
-}
-
-/* Dropdown saites */
-.w3-dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    transition: background 0.3s ease-in-out;
-}
-
-/* Dropdown saites hover */
 .w3-dropdown-content a:hover {
     background-color: white;
-    color: rgb(3, 2, 2);
-}
+    color: rgb(3, 2, 2);}
 
-/* Dropdown parādīšana uz hover */
-.w3-dropdown-hover:hover .w3-dropdown-content {
-    display: block;
-}
 
-/* ======= LAPAS SATURS ======= */
+      
+
+/* Center the content boxes */
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 80px;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center them horizontally */
+    justify-content: center; /* Center them vertically if needed */
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
-/* Saturu blokiem */
+/* Style for content boxes */
 .content-box {
-    width: 90%;
-    max-width: 1200px;
+    width: 120%; /* Adjust width as needed */
+    max-width: 1200px; /* Prevents being too wide on large screens */
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px 0; /* Space between boxes */
     text-align: center;
-    word-wrap: break-word;
+   word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal; 
 }
-
-/* ======= GALVENE (H1 STILS) ======= */
 .h1 {
     font-size: 36px;
     font-weight: bold;
@@ -126,57 +77,33 @@ body {
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
 }
 
-/* ======= POGAS STILS ======= */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+
+.w3-dropdown-hover {
+    position: relative; /* Ensures dropdown aligns with button */
 }
 
-.button-link {
-    display: inline-block;
-    padding: 12px 20px;
+.w3-dropdown-content {
+    display: none;
+    position: absolute;
     background-color: rgb(5, 35, 99);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    min-width: 160px;
+    box-shadow: 0px 4px 10px rgb(86, 130, 224);
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    
+   top: calc(100% + 5px); /* Places it slightly below the button for spacing */
+    left: 50%; /* Centers it under the button */
+    transform: translateX(-50%); /* Adjusts centering */
+    
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+.w3-dropdown-hover {
+    display: inline-block; /* Prevents weird centering issues */
+    text-align: left; /* Ensures left alignment */
+}
+/* Show dropdown on hover */
+.w3-dropdown-hover:hover .w3-dropdown-content {
+    display: block;
 }
 
-.button-link:hover {
-    background-color: white;
-    color: rgb(5, 35, 99);
-    border: 2px solid rgb(5, 35, 99);
-}
 
-/* ======= ATTĒLI ======= */
-img {
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    height: auto;
-}
 
-/* ======= RESPONSIVITĀTE (mobilās ierīces) ======= */
-@media screen and (max-width: 768px) {
-    .w3-bar {
-        flex-direction: column;
-    }
-
-    .w3-bar-item.w3-button, 
-    .w3-dropdown-hover .w3-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .w3-dropdown-content {
-        position: relative;
-        width: 100%;
-    }
-
-    .container {
-        padding-top: 100px;
-    }
-}
