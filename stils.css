@@ -18,8 +18,10 @@
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
-    box}
-
+    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
 
 .w3-bar-item.w3-button:hover, 
 .w3-dropdown-hover .w3-button:hover {
@@ -40,23 +42,14 @@
     min-width: 160px;
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
     border-radius: 5px;
-    
     top: 100%; /* Places it directly below the button */
-    left: 0; /* Aligns it with the parent button */
-    transform: none; /* Removes centering effect */
-    z-index: 1000; /* Ensures it appears above other elements */
+    left: 0;
+    z-index: 1000;
 }
 
 /* Show dropdown on hover */
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
-    position: absolute;
-    top: 100%; /* Tieši zem dropdown trigeri */
-    left: 0;
-    width: max-content; /* Pielāgo platumu saturam */
-    background: white; /* Pievieno fonu */
-    z-index: 1000; /* Nodrošina, ka dropdown paliek virs citiem elementiem */
-
 }
 
 /* Dropdown Link Styling */
@@ -114,4 +107,9 @@ body {
     background-color: rgb(5, 35, 99);
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
+}
+
+/* Adjust dropdown button background when clicked */
+.w3-dropdown-content {
+    background-color: rgb(5, 35, 99); /* To ensure proper styling of the dropdown */
 }
