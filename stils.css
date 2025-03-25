@@ -36,16 +36,11 @@
 }
 
 .w3-dropdown-content {
-    display: none;
     position: absolute;
-    background-color: rgb(5, 35, 99);
-    min-width: 160px;
-    box-shadow: 0px 4px 10px rgb(86, 130, 224);
-    border-radius: 5px;
-    top: 100%; /* Places it directly below the button */
     right: 0;
-    z-index: 1000;
+    /* Other styles */
 }
+
 
 /* Show dropdown on hover */
 .w3-dropdown-hover:hover .w3-dropdown-content {
