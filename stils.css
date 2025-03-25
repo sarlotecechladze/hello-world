@@ -107,4 +107,6 @@ position: relative;
     left: 0; /* Aligns it with the left side of the button */
     width: 100%; /* Matches the button's width */
     z-index: 1000; /* Ensures it appears above other elements */
+    border-radius: 1px;
+    transition: background 0.3s ease-in-out;
 }
