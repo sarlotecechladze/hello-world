@@ -88,6 +88,7 @@ body {
     border-radius: 1px;
     z-index: 1; /* Ensures it appears above other elements */
     right:0;
+     left: -20px; /* Pārvieto pa kreisi */
 
 }
 
