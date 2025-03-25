@@ -43,9 +43,8 @@
     border-radius: 5px;
     
     top: 100%; /* Places it directly below the button */
-    left: 50%;
-    transform: translateX(-50%); /* Centers dropdown */
-    
+    left: 0; /* Aligns it with the parent button */
+    transform: none; /* Removes centering effect */
     z-index: 1000; /* Ensures it appears above other elements */
 }
 
