@@ -96,7 +96,10 @@ body {
     
     z-index: 1000; /* Ensures it appears above other elements */
 }
-
+.w3-dropdown-hover {
+    display: inline-block; /* Prevents weird centering issues */
+    text-align: left; /* Ensures left alignment */
+}
 /* Show dropdown on hover */
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
