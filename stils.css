@@ -114,8 +114,4 @@ body {
     background-color: white;
     color: black; 
 
-.scroll 
-    {
-    padding-top: 80px; /* Adjust according to your navbar height */
-    margin-top: -80px; /* Compensates for the padding to prevent section overlap */
-}
+
