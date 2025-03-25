@@ -2,29 +2,34 @@
 .w3-bar {
     background-color: rgb(5, 35, 99); 
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
+    flex-wrap: wrap; /* Nodrošina labāku responsivitāti */
+    padding: 10px 0;
+    position: fixed; /* Saglabā navigāciju ekrāna augšpusē */
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Navbar Button Styling */
+/* Navbar pogas */
 .w3-bar-item.w3-button, 
-.w3-dropdown-hover .w3-button{
+.w3-dropdown-hover .w3-button {
     background-color: rgb(5, 35, 99);
     color: white;
     padding: 14px 20px;
-    margin: 10px;
+    margin: 5px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
-    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    box-shadow: 0px 4px 10px rgba(86, 130, 224, 0.6);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    min-width: 150px; /* Vari pielāgot platumu pēc nepieciešamības */
-    text-align: center;
+    min-width: 150px;
 }
 
+/* Hover efekts */
 .w3-bar-item.w3-button:hover, 
 .w3-dropdown-hover .w3-button:hover {
     background-color: white;
@@ -34,22 +39,21 @@
 /* Dropdown Fix */
 .w3-dropdown-hover {
     position: relative;
-    display: inline-block;
 }
 
+/* Dropdown saturs */
 .w3-dropdown-content {
-    position: relative;
-    right: 0 !important;
-    /* Other styles */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(5, 35, 99);
+    min-width: 160px;
+    box-shadow: 0px 4px 10px rgba(86, 130, 224, 0.6);
+    z-index: 999;
 }
 
-
-/* Show dropdown on hover */
-.w3-dropdown-hover:hover .w3-dropdown-content {
-    display: block;
-}
-
-/* Dropdown Link Styling */
+/* Dropdown saites */
 .w3-dropdown-content a {
     display: block;
     padding: 10px;
@@ -59,18 +63,26 @@
     transition: background 0.3s ease-in-out;
 }
 
+/* Dropdown saites hover */
 .w3-dropdown-content a:hover {
     background-color: white;
     color: rgb(3, 2, 2);
 }
 
-/* Page Background */
+/* Parāda dropdown saturu uz hover */
+.w3-dropdown-hover:hover .w3-dropdown-content {
+    display: block;
+}
+
+/* Background */
 body {
     background-image: url('images/backgw.png'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
 
 /* Content Boxes */
@@ -79,6 +91,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding-top: 80px; /* Kompensē fixed navbar */
 }
 
 .content-box {
@@ -86,13 +99,14 @@ body {
     max-width: 1200px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    box-shadow: 0px 4px 10px rgba(86, 130, 224, 0.6);
     padding: 20px;
     margin: 10px 0;
     text-align: center;
     word-wrap: break-word;
 }
 
+/* Virsraksti */
 .h1 {
     font-size: 36px;
     font-weight: bold;
@@ -103,10 +117,23 @@ body {
     padding: 10px;
     background-color: rgb(5, 35, 99);
     border-radius: 5px;
-    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    box-shadow: 0px 4px 10px rgba(86, 130, 224, 0.6);
 }
 
-/* Adjust dropdown button background when clicked */
-.w3-dropdown-content {
-    background-color: rgb(5, 35, 99); /* To ensure proper styling of the dropdown */
+/* Responsivitāte */
+@media screen and (max-width: 768px) {
+    .w3-bar {
+        flex-direction: column;
+    }
+    
+    .w3-bar-item.w3-button, 
+    .w3-dropdown-hover .w3-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .w3-dropdown-content {
+        position: relative;
+        width: 100%;
+    }
 }
