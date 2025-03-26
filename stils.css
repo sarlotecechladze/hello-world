@@ -60,6 +60,7 @@ body {
    word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal; 
+    justify-content: center; /* Center them vertically if needed */
 }
 .h1 {
     font-size: 36px;
