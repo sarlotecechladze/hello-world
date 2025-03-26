@@ -5,7 +5,8 @@
     align-items: center;
 }
 body {
-      background-image: url('../images/gab.png');
+      background-image: url('images/gab.png');
+
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; 
