@@ -114,5 +114,9 @@ body {
 .w3-dropdown-content a:hover {
     background-color: white;
     color: black; 
-
+}
+#individuala-tema{
+    width: 50%;
+    margin: auto;
+}
 
