@@ -119,4 +119,19 @@ body {
     width: 50%;
     margin: auto;
 }
+.ats
+{
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgb(5, 35, 99);
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgb(86, 130, 224);
+    margin-top: 80px;
+}
+
+    
+
 
