@@ -136,8 +136,9 @@ body {
 
 }
 
-    #ievads, #3d-veidosana, #video-apstrade, #izklajlapas, #rastrgrafika, #vektorgrafika, #word {
-    scroll-margin-top: 100px; /* Adjust according to navbar height */
+  html {
+    scroll-padding-top: 80px; /* Adjust to match your navbar height */
+    scroll-behavior: smooth;  /* Enables smooth scrolling */
 }
 
 
