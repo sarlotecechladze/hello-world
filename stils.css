@@ -38,29 +38,29 @@ body {
 
       
 
-/* Center the content boxes */
+
 .container {
     display: flex;
-    flex-direction: column; /* Stack boxes vertically */
-    align-items: center; /* Center them horizontally */
-    justify-content: center; /* Center them vertically if needed */
-    min-height: 100vh; /* Ensure full viewport height */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
 }
 
-/* Style for content boxes */
+
 .content-box {
-    width: 120%; /* Adjust width as needed */
-    max-width: 1200px; /* Prevents being too wide on large screens */
+    width: 120%; 
+    max-width: 1200px; 
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
     padding: 20px;
-    margin: 10px 0; /* Space between boxes */
+    margin: 10px 0; 
     text-align: center;
    word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal; 
-    justify-content: center; /* Center them vertically if needed */
+    justify-content: center; 
 }
 .h1 {
     font-size: 36px;
@@ -78,7 +78,7 @@ body {
 
 
 .w3-dropdown-hover {
-    position: relative; /* Ensures dropdown aligns with button */
+    position: relative; 
 }
 
 .w3-dropdown-content {
@@ -88,13 +88,12 @@ body {
     min-width: 160px;
     box-shadow: 0px 4px 10px rgb(86, 130, 224);
     border-radius: 1px;
-    z-index: 1; /* Ensures it appears above other elements */
+    z-index: 1;
 
-     transform: translateX(-16px); /* Pārvieto pa kreisi par 20px */
+     transform: translateX(-16px); 
 
 }
 
-/* Show dropdown on hover */
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
 }
