@@ -120,9 +120,7 @@ body {
     margin: auto;
 }
 
-  #ievads, #3d-veidosana, #video-apstrade, #izklajlapas, #rastrgrafika, #vektorgrafika, #word {
-    scroll-margin-top: 100px; /* Adjust according to navbar height */
-}
+ 
 
 
 
