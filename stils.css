@@ -5,7 +5,7 @@
     align-items: center;
 }
 body {
-      background-image: url('../images/istaisi.png');
+      background-image: url('../images/istaisi.png')!important;
 
     background-size: cover; 
     background-position: center; 
