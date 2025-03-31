@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <title>Datu lejupielādes kalkulators</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .speed-info {
+            background-color: #e8f4fc;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .radio-group {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .radio-option {
+            margin: 10px 0;
+        }
+        .result {
+            background-color: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: none;
+        }
+        .result-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Datu lejupielādes kalkulators</h1>
+        
+       
+        
+        <div class="input-group">
+            <label for="seconds">Lejupielādes ilgums (sekundes), ja interneta ātrums ir 25Mb/s:</label>
+            <input type="number" id="seconds" min="1" placeholder="Ievadiet sekunžu skaitu">
+        </div>
+        
+        <div class="radio-group">
+            <label>Rādīt rezultātu:</label>
+            <div class="radio-option">
+                <input type="radio" id="kibibytes" name="unit" value="kibibytes" checked>
+                <label for="kibibytes">Kibibaiti (KiB) - 1 KiB = 1024 baiti</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="kilobytes" name="unit" value="kilobytes">
+                <label for="kilobytes">Kilobaiti (KB) - 1 KB = 1000 baiti</label>
+            </div>
+        </div>
+        
+        <div id="result" class="result">
+            <div class="result-title">Lejupielādētais datu daudzums:</div>
+            <div id="mainResult"></div>
+        </div>
+    </div>
 
+    <script>
+        const speedMbps = 25; // Fiksētais ātrums 25 Mb/s (megabiti sekundē)
+        
+        document.getElementById('seconds').addEventListener('input', function() {
+            calculateData();
+        });
+        
+        document.querySelectorAll('input[name="unit"]').forEach(radio => {
+            radio.addEventListener('change', calculateData);
+        });
+        
+        function calculateData() {
+            const seconds = parseFloat(document.getElementById('seconds').value);
+            const unit = document.querySelector('input[name="unit"]:checked').value;
+            
+            if (!seconds || seconds <= 0) {
+                document.getElementById('result').style.display = 'none';
+                return;
+            }
+            
+            // Aprēķini (25 Mb/s = 25 000 000 biti sekundē)
+            const totalBits = speedMbps * 1000000 * seconds;
+            
+            let result, unitText;
+            if (unit === "kibibytes") {
+                // Konvertē uz kibibaitiem (1 KiB = 1024 baiti)
+                result = totalBits / 8 / 1024;
+                unitText = "KiB";
+            } else {
+                // Konvertē uz kilobaitiem (1 KB = 1000 baiti)
+                result = totalBits / 8 / 1000;
+                unitText = "KB";
+            }
+            
+            // Rādām rezultātus
+            document.getElementById('mainResult').innerHTML = `
+                <strong>${result.toFixed(2)} ${unitText}</strong>
+            `;
+            
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+	  <a href="Portifolio.html">ATPAKAĻ UZ PORTIFOLIO</a>
+</body>
+</html>
